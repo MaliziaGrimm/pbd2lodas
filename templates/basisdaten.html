@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Tool pbd2lodas</title>
+<title>Tool pbd2lodas V0.2a</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../static/w3.css">
@@ -14,7 +14,7 @@
 
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-   <center>Erfassen von variablen Werten für die DATEV Lohnabrechnung (Lodas)</center>
+   <center>Stammdaten für die Vorerfassung pbd2lodas V0.2a für DATEV Lodas</center>
 </header>
 
 <!--Navigation-->
@@ -22,7 +22,7 @@
 <hr>
 <div class="w3-bar w3-theme">
   <a href="index.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
-  <a href="basisdaten.html" class="w3-bar-item w3-button w3-padding-16">Basisdaten</a>
+  
 
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-padding-16">
@@ -35,8 +35,8 @@
     </div>
   </div>
 
-  <a href="konvertierung.html" class="w3-bar-item w3-button w3-padding-16 w3-right">Konvertieren</a>
-  
+  <a href="konvertierung.html" class="w3-bar-item w3-button w3-padding-16">Konvertieren</a>
+  <a href="basisdaten.html" class="w3-bar-item w3-button w3-padding-16 w3-right">Konfiguration</a>
 </div>
 <br>
 
@@ -47,7 +47,7 @@
 
   <div class="w3-half">
   <form action = "http://localhost:1701/basisdaten.html" class="w3-container w3-card-4 w3-round", method = "POST">
-  <h2>Grunddaten für Abrechnungsmonat erfassen</h2>
+  <h2>Grunddaten für deine Abrechnung erfassen</h2>
     <div class="w3-section">      
       <div class="w3-half">
       <input class="w3-input w3-border w3-round" type="text" name="form_berater", required maxlength="6">
@@ -63,73 +63,56 @@
     <br>
   
   <div class="w3-row">
-    <div class="w3-quarter">Abrechnungsmonat:<br>
-      <input id="januar" class="w3-radio" type="radio" name="form_monat" value="01" checked>
-      <label>Januar</label>
+    <div class="w3-quarter">Stundenlohnarten:<br>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ns1" value="Nummer" maxlength="4">
       <br>
-      <input id="februar" class="w3-radio" type="radio" name="form_monat" value="02">
-      <label>Februar</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ns2" value="Nummer" maxlength="4">
       <br>
-      <input id="maerz" class="w3-radio" type="radio" name="form_monat" value="03">
-      <label>März</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ns3" value="Nummer" maxlength="4">
       <br>
-      <input id="april" class="w3-radio" type="radio" name="form_monat" value="04">
-      <label>April</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ns4" value="Nummer" maxlength="4">
       <br>
-      <input id="mai" class="w3-radio" type="radio" name="form_monat" value="05">
-      <label>Mai</label>
-          <br>
-      <input id="juni" class="w3-radio" type="radio" name="form_monat" value="06">
-      <label>Juni</label>
-          <br><br>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ns5" value="Nummer" maxlength="4">
     </div>
     <div class="w3-quarter">
       <br>
-      <input id="juli" class="w3-radio" type="radio" name="form_monat" value="07">
-      <label>Juli</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ts1" value="Lohnartname" maxlength="13">
+        <br>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ts2" value="Lohnartname" maxlength="13">
           <br>
-      <input id="august" class="w3-radio" type="radio" name="form_monat" value="08">
-      <label>August</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ts3" value="Lohnartname" maxlength="13">
           <br>
-      <input id="september" class="w3-radio" type="radio" name="form_monat" value="09">
-      <label>September</label>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ts4" value="Lohnartname" maxlength="13">
           <br>
-      <input id="oktober" class="w3-radio" type="radio" name="form_monat" value="10">
-      <label>Oktober</label>
-          <br>
-      <input id="november" class="w3-radio" type="radio" name="form_monat" value="11">
-      <label>November</label>
-          <br>
-      <input id="dezember" class="w3-radio" type="radio" name="form_monat" value="12">
-      <label>Dezember</label>
-      <br><br>
+      <input class="w3-input w3-border w3-round" type="text" name="loa_ts5" value="Lohnartname" maxlength="13">
+      <br>
     </div>
     
-      <div class="w3-quarter">Abrechnungsjahr:<br></div>
+      <div class="w3-quarter">Betragslohnarten:<br>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_nb1" value="Nummer" maxlength="4">
+        <br>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_nb2" value="Nummer" maxlength="4">
+        <br>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_nb3" value="Nummer" maxlength="4">
+        <br>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_nb4" value="Nummer" maxlength="4">
+        <br>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_nb5" value="Nummer" maxlength="4">
+      </div>
       <div class="w3-quarter"><br>
-        <input id="2019" class="w3-radio" type="radio" name="form_jahr" value="2019">
-        <label>2019</label>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_tb1" value="Lohnartname" maxlength="13">
         <br>
-        <input id="2020" class="w3-radio" type="radio" name="form_jahr" value="2020" checked>
-        <label>2020</label>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_tb2" value="Lohnartname" maxlength="13">
         <br>
-        <input id="2021" class="w3-radio" type="radio" name="form_jahr" value="2021">
-        <label>2021</label>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_tb3" value="Lohnartname" maxlength="13">
         <br>
-        <input id="2022" class="w3-radio" type="radio" name="form_jahr" value="2022">
-        <label>2022</label>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_tb4" value="Lohnartname" maxlength="13">
         <br>
-        <input id="2023" class="w3-radio" type="radio" name="form_jahr" value="2023">
-        <label>2023</label>
+        <input class="w3-input w3-border w3-round" type="text" name="loa_tb5" value="Lohnartname" maxlength="13">
+        </div>
+        <br>
       </div>
-      </div>
-    
-
-
-
-
-
-
+ 
     <div class="w3-third">    
       <center>
       <input type = "submit" button class="w3-btn w3-theme" value = "speichern"/></p>
@@ -149,7 +132,13 @@
   <div class="w3-quarter">&nbsp;
   </div>
 </div>
-<br><br>
+<br>
+<div class="w3-panel w3-border w3-theme-g1 w3-round-large">
+    <center><h3>
+    Lege am besten alle 10 Lohnarten an!<br>
+    Sprich die Inhalte mit Deinem Steuerberater ab!</h3>
+    </div> 
+<br>
 <hr>
 </body>
 </html>

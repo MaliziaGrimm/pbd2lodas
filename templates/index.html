@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Tool pbd2lodas</title>
+<title>Tool pbd2lodas V0.2a</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../static/w3.css">
@@ -13,7 +13,7 @@
 
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-   <center>Lohnabrechnungsdatenerfassung</center>
+   <center>Lohnabrechnungsdatenerfassung V0.2a</center>
 </header>
 
 <!--Navigation-->
@@ -21,7 +21,7 @@
 <hr>
 <div class="w3-bar w3-theme">
   <a href="index.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
-  <a href="basisdaten.html" class="w3-bar-item w3-button w3-padding-16">Basisdaten</a>
+
   
   <div class="w3-dropdown-hover">
     <button class="w3-button w3-padding-16">
@@ -33,34 +33,125 @@
       <a href="index.html" class="w3-bar-item w3-button">Statistik Stufe 2</a>
     </div>
   </div>
+  <a href="konvertierung.html" class="w3-bar-item w3-button w3-padding-16">Konvertieren</a>
+  <a href="basisdaten.html" class="w3-bar-item w3-button w3-padding-16 w3-right">Konfiguration</a>
 
-  <a href="konvertierung.html" class="w3-bar-item w3-button w3-padding-16 w3-right">Konvertieren</a>
 </div>
 </div>
-<br><br>
-
 <div class="w3-row-padding">
 
-<div class="w3-panel w3-border w3-theme-g1 w3-round-large">
-<center><h3>
-Du willst einfach Stunden und Beträge für die Lohnabrechnung für Deinen Steueberater erfassen?<br>Dann bist Du hier genau richtig!<br><br>
-Sprich die Inhalte mit Deinem Steuerberater ab!</h3>
-</div> 
+  <div class="w3-panel w3-border w3-theme-g1 w3-round-large">
+  <center><h3>
+  Du willst einfach Stunden und Beträge für die Lohnabrechnung für Deinen Steuerberater erfassen?<br>Dann bist Du hier genau richtig!<br>
+  Sprich die Inhalte mit Deinem Steuerberater ab!</h3>
+  </div> 
 
+  <div class="w3-row-padding">
+    <br>
+      <div class="w3-quarter">&nbsp;
+      </div>
+    
+      <div class="w3-half">
+      <form action = "http://localhost:1701/index.html" class="w3-container w3-card-4 w3-round", method = "POST">
+      <h2>wähle den Abrechnungszeitraum</h2>
+      
+      <div class="w3-row">
+        <div class="w3-quarter"><h4>Abrechnungsmonat:</h4>
+          <input id="januar" class="w3-radio" type="radio" name="form_monat" value="01" checked>
+          <label>Januar</label>
+          <br>
+          <input id="februar" class="w3-radio" type="radio" name="form_monat" value="02">
+          <label>Februar</label>
+          <br>
+          <input id="maerz" class="w3-radio" type="radio" name="form_monat" value="03">
+          <label>März</label>
+          <br>
+          <input id="april" class="w3-radio" type="radio" name="form_monat" value="04">
+          <label>April</label>
+          <br>
+          <input id="mai" class="w3-radio" type="radio" name="form_monat" value="05">
+          <label>Mai</label>
+              <br>
+          <input id="juni" class="w3-radio" type="radio" name="form_monat" value="06">
+          <label>Juni</label>
+              <br><br>
+        </div>
+        <div class="w3-quarter">
+          <br><br>
+          <input id="juli" class="w3-radio" type="radio" name="form_monat" value="07">
+          <label>Juli</label>
+              <br>
+          <input id="august" class="w3-radio" type="radio" name="form_monat" value="08">
+          <label>August</label>
+              <br>
+          <input id="september" class="w3-radio" type="radio" name="form_monat" value="09">
+          <label>September</label>
+              <br>
+          <input id="oktober" class="w3-radio" type="radio" name="form_monat" value="10">
+          <label>Oktober</label>
+              <br>
+          <input id="november" class="w3-radio" type="radio" name="form_monat" value="11">
+          <label>November</label>
+              <br>
+          <input id="dezember" class="w3-radio" type="radio" name="form_monat" value="12">
+          <label>Dezember</label>
+          <br><br>
+        </div>
+        
+          <div class="w3-quarter"><h4>Abrechnungsjahr:</h4><br></div>
+          <div class="w3-quarter"><br><br>
+            <input id="2019" class="w3-radio" type="radio" name="form_jahr" value="2019">
+            <label>2019</label>
+            <br>
+            <input id="2020" class="w3-radio" type="radio" name="form_jahr" value="2020" checked>
+            <label>2020</label>
+            <br>
+            <input id="2021" class="w3-radio" type="radio" name="form_jahr" value="2021">
+            <label>2021</label>
+            <br>
+            <input id="2022" class="w3-radio" type="radio" name="form_jahr" value="2022">
+            <label>2022</label>
+            <br>
+            <input id="2023" class="w3-radio" type="radio" name="form_jahr" value="2023">
+            <label>2023</label>
+          </div>
+          </div>
+    
+        <div class="w3-third">    
+          <center>
+          <input type = "submit" button class="w3-btn w3-theme" value = "speichern"/></p>
+          </center>
+        </div>
+     
+        <div class="w3-third">&NonBreakingSpace;</div>    
+        
+        <div class="w3-third">  
+          <center>
+          <a href="index.html" button class="w3-btn w3-theme" onclick="move()">verwerfen</button> </a>
+          </center>
+        </div>
+      </form>
+    </div>
+    
+      <div class="w3-quarter">&nbsp;
+      </div>
+    </div>
+
+<br>
 <center>
 <img src="../static/image001.png"/>
 </center>
-<br>
+<hr>
+<center>{{v_text}}</center>
+<hr>
 <div class="w3-panel w3-border w3-theme-g1 w3-round-large">
-  <center><h3>
-  lege zuerst die Basisdaten an, dann kannst du Stunden und Beträge für die Lohnabrechnung erfassen <br><br>
-  am Ende konvertierst du die Datei für deinen Steuerberater und stellst ihm diese zur Verfügung<br><br>
-am besten mit Unternehmen online oder DATEV CloudBox - denke an den Datenschutz!</h3>
+  <center>
+  <h2>Anleitung:</h2>
+  <p>lege einmalig zuerst die Konfiguration (Beraternummer, Mandantennummer, Lohnarten) an,<br>
+  wähle hier den Abrechnungszeitraum, dann kannst du Stunden und Beträge für die Lohnabrechnung erfassen <br>
+  am Ende konvertierst du die Datei für deinen Steuerberater und stellst ihm diese Datei zur Verfügung<br>
+am besten mit Unternehmen online oder DATEV CloudBox - denke an den Datenschutz!</p>
   </div> 
-
-
-
-  
-
+<br>
 </body>
 </html>
