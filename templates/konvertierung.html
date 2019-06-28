@@ -2,66 +2,70 @@
 <html>
 
 <head>
-<title>Tool pbd2lodas V0.2a</title>
+<title>Tool pbd2lodas V0.2b</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../static/w3.css">
 <link rel="stylesheet" href="../static/aktuellesthema.css">
+<link rel="stylesheet" href="../static/bootstrap.min.css">
+<link rel="stylesheet" href="../static/dna-theme.css">
 </head>
 
 <body>
 
 <!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-   <center>Lohnabrechnungsdatenerfassung V0.2a</center>
-</header>
+<div class="w3-row-padding">
+    <header class="card">
+      <center><h3>Konvertierung der Daten für DATEV Lodas pbd2lodasV0.2b</h3></center>
+    </header>
+  </div>
+  <br>
 
 <!--Navigation-->
 <div class="w3-container">
-<hr>
-<div class="w3-bar w3-theme">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
-  
-  <div class="w3-dropdown-hover">
-    <button class="w3-button w3-padding-16">
-      Erfassung<i class="fa fa-caret-down"></i>
-    </button>
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="erfassungstunden.html" class="w3-bar-item w3-button">Stunden</a>
-      <a href="erfassungbetrag.html" class="w3-bar-item w3-button">Beträge</a>
-      <a href="index.html" class="w3-bar-item w3-button">Statistik Stufe 2</a>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Erfassung</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="erfassungstunden.html">Stunden</a>
+          <a class="dropdown-item" href="erfassungbetrag.html">Beträge</a>
+          <a class="dropdown-item disabled" href="#">Statistik</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="konvertierung.html">Konvertieren</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="basisdaten.html">Konfiguration</a>
+      </li>
+    </ul>
     </div>
-  </div>
-
-  <a href="konvertierung.html" class="w3-bar-item w3-button w3-padding-16">Konvertieren</a>
-  <a href="basisdaten.html" class="w3-bar-item w3-button w3-padding-16 w3-right">Konfiguration</a>
-
-</div>
-</div>
-<br><br>
-
+  <br>
+  
 <div class="w3-row-padding">
 
-<div class="w3-panel w3-border w3-theme-g1 w3-round-large">
+<div class="card">
 <center><h3>
-Du willst einfach Stunden und Beträge für die Lohnabrechnung für Deinen Steueberater erfassen?<br>Dann bist Du hier genau richtig!<br><br>
+Du willst einfach Stunden und Beträge für die Lohnabrechnung für Deinen Steuerberater erfassen?<br>Dann bist Du hier genau richtig!<br><br>
 Sprich die Inhalte mit Deinem Steuerberater ab!</h3>
 </div> 
 
-<center>
-<img src="../static/image001.png"/>
-</center>
 <br>
-<div class="w3-panel w3-border w3-theme-g1 w3-round-large">
+
+<div class="card">
   <center><h3>
-  lege zuerst die Basisdaten an, dann kannst du Stunden und Beträge für die Lohnabrechnung erfassen <br><br>
-  am Ende konvertierst du die Datei für deinen Steuerberater und stellst ihm diese zur Verfügung<br><br>
-am besten mit Unternehmen online oder DATEV CloudBox - denke an den Datenschutz!</h3>
+ Diese Seite darfst Du eigentlich nicht sehen !!<br><br>
+ Mögliche Fehler: keine Daten erfasst, keine Stammdaten hinterlegt oder das Programm nicht über "localhost:1701 gestartet?"" <br><br>
+</h3>
   </div> 
 
-
-
-  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>
