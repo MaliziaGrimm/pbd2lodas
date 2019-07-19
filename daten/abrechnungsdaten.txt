@@ -2,54 +2,6 @@
 
 [Stammdaten]
 20;41;2019-07-19;;;;;;;
-21;41;'q';'q';'q';'q';'q';q;000;2019-07-19;1;;;;;
-22;41;;101;9;9;;
-23;41;;
-24;41;;1;;;;
-25;41;0;1;1;1;1;
-26;41;5;;
-[Hinweisdaten]
-Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit: 
-
-
-[Stammdaten]
-20;41;2019-07-19;;;;;;;
-21;41;'11';'11';'11';'11';'11';11;000;2019-07-19;1;;;;;
-22;41;;101;9;9;;
-23;41;;
-24;41;;1;;;;
-25;41;0;1;1;1;1;
-26;41;5;;
-[Hinweisdaten]
-Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit: 
-
-
-[Stammdaten]
-20;41;2019-07-19;;;;;;;
-21;41;'44';'44';'144';'44';'44';44;000;2019-07-19;1;;;;;
-22;41;;101;9;9;;
-23;41;;
-24;41;;1;;;;
-25;41;0;1;1;1;1;
-26;41;5;;
-[Hinweisdaten]
-Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit: 
-
-
-[Stammdaten]
-20;41;2019-07-19;;;;;;;
-21;41;'44';'444';'44';'44';'44';44;000;2019-07-19;1;;;;;
-22;41;;101;9;9;;
-23;41;;
-24;41;;1;;;;
-25;41;0;1;1;1;1;
-26;41;5;;
-[Hinweisdaten]
-Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit: 
-
-
-[Stammdaten]
-20;41;2019-07-19;;;;;;;
 21;41;'44';'44';'44';'44';'44';44;000;19072019;1;;;;;
 22;41;;101;9;9;;
 23;41;;
@@ -57,4 +9,4 @@ Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit:
 25;41;0;1;1;1;1;
 26;41;5;;
 [Hinweisdaten]
-Hinweis: PNR: 41 Krankenkasse:  Staatsangehörigkeit: 
+Hinweis: PNR: 41 Krankenkasse:  StaatsangehÃ¶rigkeit: 
