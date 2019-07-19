@@ -1,0 +1,74 @@
+[Allgemein]
+Ziel=LODAS
+Version_SST=1.0
+BeraterNr=228198
+MandantenNr=10102
+Datumsformat=JJJJ-MM-TT
+Stringbegrenzer='
+
+* LEGENDE:
+* Datei erzeugt mit Tool pbd2lodas
+* AP: Andreé Rosenkranz; andree@rosenkranz.one
+
+* Satzbeschreibungen zur Übergabe von Bewegungsdaten für Mitarbeiter
+[Satzbeschreibung]
+
+10;u_lod_bwd_buchung_standard;abrechnung_zeitraum#bwd;pnr#bwd;la_eigene#bwd;bs_nr#bwd;bs_wert_butab#bwd;kostenstelle#bwd;
+20;u_lod_psd_beschaeftigung;pnr#psd;eintrittdatum#psd;austrittdatum#psd;arbeitsverhaeltnis#psd;schriftl_befristung#psd;datum_urspr_befr#psd;abschl_befr_arbvertr#psd;verl_befr_arbvertr#psd;befr_gr_2_monate#psd;
+21;u_lod_psd_mitarbeiter;pnr#psd;duevo_familienname#psd;duevo_vorname#psd;adresse_strassenname#psd;adresse_strasse_nr#psd;adresse_ort#psd;adresse_plz#psd;staatsangehoerigkeit#psd;geburtsdatum_ttmmjj#psd;geschlecht#psd;familienstand#psd;sozialversicherung_nr#psd;adresse_anschriftenzusatz#psd;gebort#psd;
+22;u_lod_psd_taetigkeit;pnr#psd;berufsbezeichnung#psd;persgrs#psd;schulabschluss#psd;ausbildungsabschluss#psd;stammkostenstelle#psd;
+23;u_lod_psd_arbeitszeit_regelm;pnr#psd;az_wtl_indiv#psd;
+24;u_lod_psd_steuer;pnr#psd;identifikationsnummer#psd;els_2_haupt_ag_kz#psd;st_klasse#psd;kfb_anzahl#psd;faktor#psd;
+25;u_lod_psd_sozialversicherung;pnr#psd;kz_zuschl_pv_kinderlose#psd;kv_bgrs#psd;rv_bgrs#psd;av_bgrs#psd;pv_bgrs#psd;
+26;u_lod_psd_ma_bank;pnr#psd;ma_bank_zahlungsart#psd;ma_iban#psd;
+27;u_lod_psd_festbezuege;pnr#psd;festbez_id#psd;lohnart_nr#psd;betrag#psd;
+28;u_lod_psd_lohn_gehalt_bezuege;pnr#psd;std_lohn_1#psd;
+
+
+
+[Stammdaten]
+20;998;2019-08-01;;;;;;;
+21;998;'Mustername';'Mustervorname';'Musterstrasse';'99';'Musterleipzig';04177;000;1966-09-10;1;;;;Geburtsort;
+22;998;Aushilfe;109;2;2;998;
+23;998;20,00;
+24;998;;1;;;;
+25;998;2;6;5;0;0;
+26;998;5;DE47120965970002469510;
+27;998;1;51;2500,00;
+[Hinweisdaten]
+Hinweis: PNR: 998 Krankenkasse: AOK Sachsen Staatsangehörigkeit: deutsch
+Hinweis: PNR: 998 Geburtsland: Geburtsland Steuerklasse 
+ Text aus der Erfassung: weitere Angaben in der dPA
+
+* Stunden zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+10;2019-08-01;2;706;1;40,00;;
+
+* Stunden zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+10;2019-08-01;3;772;1;8,00;;
+10;2019-08-01;3;774;1;8,00;;
+
+* Stunden zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+10;2019-08-01;6;702;1;2,5;;
+10;2019-08-01;6;774;1;2,5;998;
+10;2019-08-01;6;777;1;12,00;998;
+
+* Beträge zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+
+10;2019-08-01;3;864;2;250,00;;
+
+* Beträge zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+
+10;2019-08-01;2;864;2;200,00;;
+
+* Beträge zur Abrechnung von Mitarbeitern
+[Bewegungsdaten]
+
+10;2019-08-01;2;100;2;100;;
+10;2019-08-01;2;781;2;15;;
+10;2019-08-01;2;782;2;15;;
+10;2019-08-01;2;864;2;120;;
