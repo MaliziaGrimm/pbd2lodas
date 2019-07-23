@@ -1,1 +1,1 @@
-228198|10102|702|‹berstunden|706|EFZ Urlaub|708|EFZ Krank|772|Samstagszuschlag|774|Sonntagszuschlag|100|Pr‰mie|773|Rufbereitschaft|781|Leistungpr‰mie|782|Leistungszuschlag|864|Urlaubsgeld
+999999|99999|702|√úberstunden|706|EFZ Urlaub|708|EFZ Krank|772|Samstagszuschlag|774|Sonntagszuschlag|100|Pr√§mie|773|Rufbereitschaft|781|Leistungpr√§mie|782|Leistungszuschlag|864|Urlaubsgeld
