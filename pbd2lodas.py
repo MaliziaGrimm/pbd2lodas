@@ -172,8 +172,9 @@ def personalstammdaten():
             fileziel.write("\n10;u_lod_bwd_buchung_standard;abrechnung_zeitraum#bwd;pnr#bwd;la_eigene#bwd;bs_nr#bwd;bs_wert_butab#bwd;kostenstelle#bwd;")
             fileziel.write("\n20;u_lod_psd_beschaeftigung;pnr#psd;eintrittdatum#psd;austrittdatum#psd;arbeitsverhaeltnis#psd;schriftl_befristung#psd;datum_urspr_befr#psd;abschl_befr_arbvertr#psd;verl_befr_arbvertr#psd;befr_gr_2_monate#psd;")
             fileziel.write("\n21;u_lod_psd_mitarbeiter;pnr#psd;duevo_familienname#psd;duevo_vorname#psd;adresse_strassenname#psd;adresse_strasse_nr#psd;adresse_ort#psd;adresse_plz#psd;staatsangehoerigkeit#psd;geburtsdatum_ttmmjj#psd;geschlecht#psd;familienstand#psd;sozialversicherung_nr#psd;adresse_anschriftenzusatz#psd;gebort#psd;")
-            fileziel.write("\n22;u_lod_psd_taetigkeit;pnr#psd;berufsbezeichnung#psd;persgrs#psd;schulabschluss#psd;ausbildungsabschluss#psd;stammkostenstelle#psd;")
-            fileziel.write("\n23;u_lod_psd_arbeitszeit_regelm;pnr#psd;az_wtl_indiv#psd;")
+            fileziel.write("\n22;u_lod_psd_taetigkeit;pnr#psd;berufsbezeichnung#psd;rv_beitragsgruppe#psd;persgrs#psd;schulabschluss#psd;ausbildungsabschluss#psd;stammkostenstelle#psd;")
+            fileziel.write("\n23;u_lod_psd_arbeitszeit_regelm;pnr#psd;az_wtl_indiv#psd;regelm_az_mo#psd;regelm_az_di#psd;regelm_az_mi#psd;regelm_az_do#psd;regelm_az_fr#psd;regelm_az_sa#psd;regelm_az_so#psd;")
+# 20200114            fileziel.write("\n23;u_lod_psd_arbeitszeit_regelm;pnr#psd;az_wtl_indiv#psd;")
             fileziel.write("\n24;u_lod_psd_steuer;pnr#psd;identifikationsnummer#psd;els_2_haupt_ag_kz#psd;st_klasse#psd;kfb_anzahl#psd;faktor#psd;")
             fileziel.write("\n25;u_lod_psd_sozialversicherung;pnr#psd;kz_zuschl_pv_kinderlose#psd;kv_bgrs#psd;rv_bgrs#psd;av_bgrs#psd;pv_bgrs#psd;")
             fileziel.write("\n26;u_lod_psd_ma_bank;pnr#psd;ma_bank_zahlungsart#psd;ma_iban#psd;")
@@ -186,22 +187,13 @@ def personalstammdaten():
             # Fehler wird vom Frontend abgefangen
             # print("Fehler PNR")
         else:
-            #Geburtsdatum muss formatiert werden
-            var_geburtsdatum=request.form['form_gebdatum']
-            var_geburtsdatum=str(var_geburtsdatum)   
-            var_geburtsjahr=var_geburtsdatum[0:4]   
-            var_geburtsmonat=var_geburtsdatum[5:7]
-            var_geburtstag=var_geburtsdatum[8:10]
-            #print(var_geburtsdatum)
-            #print(var_geburtstag)
-            #print(var_geburtsmonat)
-            #print(var_geburtsjahr)
-            
-            
             fileziel.write("\n\n[Stammdaten]\n20;"+request.form['form_personalnummer']+";"+request.form['form_eintrittsdatum']+";"+request.form['form_austrittsdatum']+";;;;;;")
-            fileziel.write("\n21;"+request.form['form_personalnummer']+";'"+request.form['form_name']+"';'"+request.form['form_vorname']+"';'"+request.form['form_strasse']+"';'"+request.form['form_hausnummer']+"';'"+request.form['form_wohnort']+"';"+request.form['form_plz']+";000;"+var_geburtstag+var_geburtsmonat+var_geburtsjahr+";"+request.form['form_geschlecht']+";;"+request.form['form_svnummer']+";;"+request.form['form_geburtsort']+";")
-            fileziel.write("\n22;"+request.form['form_personalnummer']+";"+request.form['form_berufsbezeichnung']+";"+request.form['form_pgr']+";"+request.form['form_schulabschluss']+";"+request.form['form_berufsausbildung']+";"+request.form['form_kostenstelle']+";")
-            fileziel.write("\n23;"+request.form['form_personalnummer']+";"+request.form['form_waz']+";")
+            fileziel.write("\n21;"+request.form['form_personalnummer']+";'"+request.form['form_name']+"';'"+request.form['form_vorname']+"';'"+request.form['form_strasse']+"';'"+request.form['form_hausnummer']+"';'"+request.form['form_wohnort']+"';"+request.form['form_plz']+";000;"+request.form['form_gebdatum']+";"+request.form['form_geschlecht']+";;"+request.form['form_svnummer']+";;"+request.form['form_geburtsort']+";")
+            fileziel.write("\n22;"+request.form['form_personalnummer']+";"+request.form['form_berufsbezeichnung']+";"+request.form['form_rvbeitragsgruppe']+";"+request.form['form_pgr']+";"+request.form['form_schulabschluss']+";"+request.form['form_berufsausbildung']+";"+request.form['form_kostenstelle']+";")
+#  20200114           fileziel.write("\n22;"+request.form['form_personalnummer']+";"+request.form['form_berufsbezeichnung']+";"+request.form['form_pgr']+";"+request.form['form_schulabschluss']+";"+request.form['form_berufsausbildung']+";"+request.form['form_kostenstelle']+";")
+# neu Tages az eingepflegt
+            fileziel.write("\n23;"+request.form['form_personalnummer']+";"+request.form['form_waz']+";"+request.form['form_wazmo']+";"+request.form['form_wazdi']+";"+request.form['form_wazmi']+";"+request.form['form_wazdo']+";"+request.form['form_wazfr']+";"+request.form['form_wazsa']+";"+request.form['form_wazso']+";")
+# 20200114            fileziel.write("\n23;"+request.form['form_personalnummer']+";"+request.form['form_waz']+";")
             fileziel.write("\n24;"+request.form['form_personalnummer']+";"+request.form['form_steuerid']+";"+request.form['form_artderbeschaeftigung']+";"+request.form['form_steuerklasse']+";"+request.form['form_kinderfreibetrag']+";;")
             fileziel.write("\n25;"+request.form['form_personalnummer']+";"+request.form['form_elterneigenschaft']+";"+request.form['form_KV']+";"+request.form['form_RV']+";"+request.form['form_AV']+";"+request.form['form_PV']+";")
             fileziel.write("\n26;"+request.form['form_personalnummer']+";5;"+request.form['form_iban']+";")
