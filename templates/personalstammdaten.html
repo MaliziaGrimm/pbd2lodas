@@ -150,6 +150,7 @@
           <option value="1">weiblich</option>
           <option value="0">männlich</option>
           <option value="2">divers</option>
+	        <option value="3">unbestimmt</option>
         </select>
       </div>
     </div>
@@ -251,7 +252,8 @@
         <option value="2">Nebenbeschäftigung</option>
       </select>
     </div>
-    
+
+  
     <div class="w3-row-padding">
       <div class="w3-col l4 w3-left">
         <p><label>weitere Beschäftigung</label></p>
@@ -269,7 +271,32 @@
         <option value="1">ja</option>
       </select>
     </div>
-      
+
+
+        
+<!--
+
+neuer Block AN Typ wird gelesen 20200114
+
+-->
+<div class="w3-row-padding">
+  <div class="w3-col l4 w3-left">
+    <p><label>Arbeitnehmertyp</label></p>
+  </div>
+  <select class="form-control w3-col l8 w3-input w3-border" type="text" name="form_rvbeitragsgruppe">
+      <option value="0" selected>Arbeiter</option>
+      <option value="1">Angestellter</option>
+      <option value="2">gewerblicher Auszubildender/geringverdienender Praktikant</option>
+      <option value="3">kaufmännischer Auszubildender/ geringverdienender Praktikant</option>
+      <option value="4">geringf. Beschäft. (Arb.), ggf. Pauschalierung</option>
+      <option value="5">geringf. Beschäft. (Ang.), ggf. Pauschalierung</option>
+      <option value="6">RV-Beitrag an ein Versorgungswerk</option>
+      <option value="7">kurzfr. Besch. mit Pauschalverst. (Arbeiter)</option>
+      <option value="8">kurzfr. Besch. mit Pauschalverst. (Angest.)</option>
+      <option value="9">permanenter Lohnsteuer-Jahresausgleich für kurzfr. Besch.</option>
+    </select>
+</div>  
+
     <div class="w3-row-padding">
       <div class="w3-col l4 w3-left">
         <p><label>Personengruppe</label></p>
@@ -359,10 +386,47 @@
         <p><label>wöchentliche Arbeitszeit</label></p>
       </div>
       <input class="w3-col l2 w3-input w3-border" type="text" name="form_waz", maxlength="5">
-      <div class="w3-col l4 w3-center">
+      <div class="w3-col l4 w3-left">
         <p><label>Austrittsdatum</label></p>
       </div>
       <input class="w3-col l2 w3-input w3-border" type="date" name="form_austrittsdatum">
+    </div>      
+   
+    <div class="w3-row-padding">
+      <div class="w3-col l1 w3-left">
+        <p><label>Montag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazmo", maxlength="4">
+      <div class="w3-col l1 w3-left">
+        <p><label>Dienstag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazdi", maxlength="4">
+      <div class="w3-col l2 w3-left">
+        <p><label>Mittwoch</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazmi", maxlength="4">
+      <div class="w3-col l2 w3-left">
+        <p><label>Donnerstag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazdo", maxlength="4">
+      <div class="w3-col l1 w3-left">
+        <p><label>Freitag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazfr", maxlength="4">
+    </div>
+    
+    <div class="w3-row-padding">
+    <div class="w3-col l1 w3-left">
+        <p><label>Samstag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazsa", maxlength="4">      
+      <div class="w3-col l1 w3-left">
+        <p><label>Sonntag</label></p>
+      </div>
+      <input class="w3-col l1 w3-input w3-border" type="text" name="form_wazso", maxlength="4">
+
+
+
     </div>   
 </div>
 
