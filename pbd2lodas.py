@@ -4,7 +4,7 @@ import os, webbrowser
 from flask import render_template
 from shutil import copyfile
 from fpdf import FPDF
-
+import setting
 
 app = Flask(__name__)
 
@@ -26,7 +26,10 @@ def homepage():
     else:
         var_textstamm="Lege zuerst eine Konfiguration an "
     var_text=var_textstamm+var_textabr
-    return render_template('index.html', v_text=var_text, v_monat=var_abrmonat, v_jahr=var_abrjahr)
+    #Version aus setting an index.html übergeben
+    var_version_titel = setting.Version_Titel
+    var_version_program = setting.Version_Program
+    return render_template('index.html', v_version_program=var_version_program, v_version_titel=var_version_titel, v_text=var_text, v_monat=var_abrmonat, v_jahr=var_abrjahr)
 # Block ok !
 
 @app.route('/index.html', methods=['POST', 'GET'])
@@ -54,7 +57,10 @@ def index():
     else:
         var_textstamm="Fehler: Konfiguration ist nicht vorhanden! "
     var_text=var_textstamm+var_textabr
-    return render_template('index.html', v_text=var_text, v_monat=var_abrmonat, v_jahr=var_abrjahr)
+        #Version aus setting an index.html übergeben
+    var_version_titel = setting.Version_Titel
+    var_version_program = setting.Version_Program
+    return render_template('index.html', v_version_program=var_version_program, v_version_titel=var_version_titel, v_text=var_text, v_monat=var_abrmonat, v_jahr=var_abrjahr)
 #Block ok
 
 @app.route('/protokoll.html', methods=['POST', 'GET'])
@@ -531,7 +537,7 @@ def konvert():
 
     return render_template('index.html', v_text=var_text)
 
-webbrowser.open('http://localhost:1701')
+webbrowser.open('http://'+setting.Flask_Server_Name)
 
 if __name__ =='__main__':
     app.run(port=1701, debug=False)
